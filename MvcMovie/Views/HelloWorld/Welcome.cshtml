@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+    var numTimes = ViewData["NumTimes"] != null ? Convert.ToInt32(ViewData["NumTimes"]) : 0;
+    var message = ViewData["Message"] != null ? ViewData["Message"].ToString() : string.Empty;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Welcome</title>
+</head>
+<body>
+
+<h2>Welcome</h2>
+     
+<ul>
+    @for (int i = 0; i < numTimes; i++)
+    {
+        <li>@message</li>
+    }
+</ul>
+</body>
+</html>
